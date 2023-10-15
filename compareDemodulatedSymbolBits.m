@@ -13,6 +13,7 @@ for i = 1:length(mod_bits)
     elseif (count == 3)
         temp_mod_array(count) = mod_bits(i);
         temp_demod_array(count) = demod_bits(i);
+        count = 1;
 
         if(~isequal(temp_demod_array, temp_mod_array))
             number_of_errors = number_of_errors + 1;
